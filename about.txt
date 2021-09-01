@@ -1,0 +1,37 @@
+The word-counter program reads the text contents of a file,
+counts each unique word and outputs an alphabetic list,
+with each word's number of occurrences in the file shown as a numeric value.
+
+
+The app is written in TypeScript with Node.js.
+It is run from the command line using ts-node,
+which compiles TypeScript to JavaScript directly at runtime.
+TypeScript written specifically for Node.js is supported by the @types/node module.
+
+The text content is extracted from files by the textract package,
+to which the module @types/textract provides TypeScript support.
+
+The tests are written with Jest,
+with the ts-jest and @types/jest package ensuring compatibility with TypeScript.
+
+
+The app is able to read the following types of files (from the textract documentation):
+
+HTML, HTM
+ATOM, RSS
+Markdown
+EPUB
+XML, XSL
+DOCX
+XLS, XLSX, XLSB, XLSM, XLTX
+CSV
+ODS, OTS
+PPTX, POTX
+ODP, OTP
+ODG, OTG
+application/javascript
+All text/* mime-types.
+
+The app is designed to work specifically with texts written in English or Estonian.
+Text in other languages may not be correctly processed by the app.
+However, many common foreign-language patterns are still supported.

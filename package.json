@@ -1,0 +1,21 @@
+{
+  "name": "word-counter",
+  "version": "1.0.0",
+  "description": "A program which reads the text content of a provided file and outputs a word-counter",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx ts-node index.ts",
+    "test": "jest --coverage"
+  },
+  "author": "Joosep Trumm",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.1",
+    "@types/textract": "^2.4.1",
+    "jest": "^27.1.0",
+    "textract": "^2.5.0",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.4.2"
+  }
+}
