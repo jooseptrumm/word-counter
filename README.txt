@@ -7,7 +7,7 @@ The app requires Node.js to be installed on your machine (https://nodejs.org/en/
 To build the app:
 
 
-Extract the contents of the archive.
+Download the repository.
 Open a terminal window in the root folder of the app (word-counter).
 Run the command "npm i".
 Wait for the installation to finish.
