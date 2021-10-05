@@ -12,14 +12,14 @@ import WordCounter from "../../interface";
 
 // Define the input and expected output for the mutateString function.
 
-const mutateStringInput: string = `Harry's mother-in-law said: 'Come here!, it's 9 o'clock'  -"No", said Harry ,"I won't, better forget it!"`;
+const mutateStringInput = `Harry's mother-in-law said: 'Come here!, it's 9 o'clock'  -"No", said Harry ,"I won't, better forget it!"`;
 
-const mutateStringOutput: string = `harry's mother-in-law said come here it's 9 o'clock no said harry i won't better forget it`;
+const mutateStringOutput = `harry's mother-in-law said come here it's 9 o'clock no said harry i won't better forget it`;
 
 
 // Define the input and expected output for the countWords function.
 
-const countWordsInput: string = "for real no way should we wait for the next bus let's wait for tram nr 7 instead"
+const countWordsInput = "for real no way should we wait for the next bus let's wait for tram nr 7 instead"
 
 const countWordsOutput: WordCounter = {
   7: 1,

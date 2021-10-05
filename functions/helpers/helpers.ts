@@ -24,23 +24,23 @@ export const mutateString = (str: string): string => {
 
   // Find all the apostrophes that don't match this criteria and replace them with a whitespace.
 
-  const cleanedOfApostrophes: string = str.replace(/((?<!s)['’]+[^a-zа-яÀ-ÖØ-öø-įĴ-őŔ-žǍ-ǰǴ-ǵǸ-țȞ-ȟȤ-ȳɃɆ-ɏḀ-ẞƀ-ƓƗ-ƚƝ-ơƤ-ƥƫ-ưƲ-ƶẠ-ỿ0-9]|[^a-zа-я0-9À-ÖØ-öø-įĴ-őŔ-žǍ-ǰǴ-ǵǸ-țȞ-ȟȤ-ȳɃɆ-ɏḀ-ẞƀ-ƓƗ-ƚƝ-ơƤ-ƥƫ-ưƲ-ƶẠ-ỿ]['’])/gi, " ");
+  const cleanedOfApostrophes = str.replace(/((?<!s)['’]+[^a-zа-яÀ-ÖØ-öø-įĴ-őŔ-žǍ-ǰǴ-ǵǸ-țȞ-ȟȤ-ȳɃɆ-ɏḀ-ẞƀ-ƓƗ-ƚƝ-ơƤ-ƥƫ-ưƲ-ƶẠ-ỿ0-9]|[^a-zа-я0-9À-ÖØ-öø-įĴ-őŔ-žǍ-ǰǴ-ǵǸ-țȞ-ȟȤ-ȳɃɆ-ɏḀ-ẞƀ-ƓƗ-ƚƝ-ơƤ-ƥƫ-ưƲ-ƶẠ-ỿ]['’])/gi, " ");
 
   // Hyphens in the middle of words are also part of legitimate words (such as "check-in" or "father-in-law").
 
   // Find all of the hyphens that don't fall into this category and replace them with a whitespace.
 
-  const cleanedOfHyphens: string = cleanedOfApostrophes.replace(/(-+[^a-zа-яÀ-ÖØ-öø-įĴ-őŔ-žǍ-ǰǴ-ǵǸ-țȞ-ȟȤ-ȳɃɆ-ɏḀ-ẞƀ-ƓƗ-ƚƝ-ơƤ-ƥƫ-ưƲ-ƶẠ-ỿ0-9]|[^a-zа-яÀ-ÖØ-öø-įĴ-őŔ-žǍ-ǰǴ-ǵǸ-țȞ-ȟȤ-ȳɃɆ-ɏḀ-ẞƀ-ƓƗ-ƚƝ-ơƤ-ƥƫ-ưƲ-ƶẠ-ỿ0-9]-+)/gi, " ");
+  const cleanedOfHyphens = cleanedOfApostrophes.replace(/(-+[^a-zа-яÀ-ÖØ-öø-įĴ-őŔ-žǍ-ǰǴ-ǵǸ-țȞ-ȟȤ-ȳɃɆ-ɏḀ-ẞƀ-ƓƗ-ƚƝ-ơƤ-ƥƫ-ưƲ-ƶẠ-ỿ0-9]|[^a-zа-яÀ-ÖØ-öø-įĴ-őŔ-žǍ-ǰǴ-ǵǸ-țȞ-ȟȤ-ȳɃɆ-ɏḀ-ẞƀ-ƓƗ-ƚƝ-ơƤ-ƥƫ-ưƲ-ƶẠ-ỿ0-9]-+)/gi, " ");
 
   // Replace all other undesired characters with whitespace.
 
-  const cleanedString: string = cleanedOfHyphens.replace(/[^a-zа-яÀ-ÖØ-öø-įĴ-őŔ-žǍ-ǰǴ-ǵǸ-țȞ-ȟȤ-ȳɃɆ-ɏḀ-ẞƀ-ƓƗ-ƚƝ-ơƤ-ƥƫ-ưƲ-ƶẠ-ỿ0-9-'’]/gi, " ");
+  const cleanedString = cleanedOfHyphens.replace(/[^a-zа-яÀ-ÖØ-öø-įĴ-őŔ-žǍ-ǰǴ-ǵǸ-țȞ-ȟȤ-ȳɃɆ-ɏḀ-ẞƀ-ƓƗ-ƚƝ-ơƤ-ƥƫ-ưƲ-ƶẠ-ỿ0-9-'’]/gi, " ");
 
   // Replace all multiple whitespace with a single whitespace.
   // Also remove possible leading and trailing whitespace
   // and finally convert the string to lower case.
 
-  const mutatedString: string = cleanedString.replace(/\s+/g, " ").trim().toLowerCase();
+  const mutatedString = cleanedString.replace(/\s+/g, " ").trim().toLowerCase();
 
   // Return the mutated string.
 
@@ -58,7 +58,7 @@ export const countWords = (str: string): WordCounter => {
   // Split the string into an array of words using whitespace as reference.
   // Also sort the array alphabetically.
 
-  const wordArray: string[] = str.split(" ").sort();
+  const wordArray = str.split(" ").sort();
 
   // In order to display a word-counter, the array will be transformed into an object.
   // Each word will be a key and the number of their occurrences will be displayed as values.

@@ -10,11 +10,13 @@
   "author": "Joosep Trumm",
   "license": "ISC",
   "dependencies": {
+    "textract": "^2.5.0"
+  },
+  "devDependencies": {
     "@types/jest": "^27.0.1",
     "@types/node": "^16.7.1",
     "@types/textract": "^2.4.1",
     "jest": "^27.1.0",
-    "textract": "^2.5.0",
     "ts-jest": "^27.0.5",
     "typescript": "^4.4.2"
   }

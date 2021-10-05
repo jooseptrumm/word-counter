@@ -11,11 +11,11 @@
 // Import the textract package and the custom callback function which will be evoked by textract.
 
 import textract from "textract";
-import callback from "./functions/callback";
+import logWords from "./functions/logWords";
 
 // Obtain the filepath specified when running the program from the terminal.
 
-const filePath: string = process.argv[2];
+const filePath = process.argv[2];
 
 // Check if a filepath is specified.
 
@@ -24,7 +24,7 @@ if (typeof filePath === "string") {
   // Extract the text contents  of the specified file
   // and evoke the custom callback function.
 
-   textract.fromFileWithPath(filePath, callback);
+   textract.fromFileWithPath(filePath, logWords);
 
   // If no filepath is specified, output a message to the console.
 
